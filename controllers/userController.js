@@ -18,7 +18,7 @@ const factory = require('../controllers/handleFactory');
 const multerStorage = multer.memoryStorage();
 
 const multerFilter = (req, file, cb) => {
-  console.log(file);
+  // console.log(file);
   if (file.mimetype.startsWith('ima')) {
     cb(null, true);
   } else {

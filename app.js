@@ -13,6 +13,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
+const compression = require('compression');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
@@ -134,6 +135,8 @@ app.use(
     ]
   })
 );
+
+app.use(compression());
 
 // app.use((req, res, next) => {
 //   console.log('Hello from the middleware 👋');
