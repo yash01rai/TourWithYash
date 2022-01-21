@@ -87,7 +87,7 @@ csp.extend(app, {
         'unsafe-inline',
         'data:',
         'blob:',
-        // 'wss://<HEROKU-SUBDOMAIN>.herokuapp.com:<PORT>/',
+        'https://mighty-anchorage-21909.herokuapp.com/',
         'https://*.stripe.com',
         'https://*.mapbox.com',
         'https://*.cloudflare.com/',
@@ -139,7 +139,7 @@ app.use(
 app.use(compression());
 
 // app.use((req, res, next) => {
-//   console.log('Hello from the middleware 👋');
+//   console.log(process.env.NODE_ENV);
 //   next();
 // });
 
