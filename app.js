@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const csp = require('express-csp');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -27,6 +28,12 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1) Global MIDDLEWARES
+// Implement CORS
+app.use(cors()); // Only for simple request GET, POST
+// Access-Control-Allow-Origin *
+
+app.options('*', cors()); // PUT, PATCH, DELETE
+
 // serving static files
 // app.use(express.static(`${__dirname}/public`));
 app.use(express.static(path.join(__dirname, 'public')));
