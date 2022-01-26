@@ -12,6 +12,7 @@ const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
+const bookingController = require('./controllers/bookingController');
 const viewRouter = require('./routes/viewRoutes');
 
 const compression = require('compression');
@@ -120,8 +121,15 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
+// Stripe webhook, BEFORE body-parser, because stripe needs the body as stream
+app.post(
+  '/webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  bookingController.webhookCheckout
+); // we don't want the body to be JSON
+
 // body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' })); // parses the data from body
+app.use(express.json({ limit: '10kb' })); // parses the data from body to Json
 app.use(express.urlencoded({ extended: true, limit: '10kb' })); // getting form data to update user info
 app.use(cookieparser()); // parses the data from cookie
 
