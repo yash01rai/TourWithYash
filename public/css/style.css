@@ -1322,3 +1322,45 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+
+@media screen and (max-width: 1000px) {
+  .main {
+    background-color: #f7f7f7;
+    padding: 7rem 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+  }
+
+  .card-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 7rem;
+  }
+
+  .nav__el,
+  .nav__el:link,
+  .nav__el:visited {
+    color: #7dd56f;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .nav--user {
+    flex-direction: row;
+    gap: 3rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    align-items: baseline;
+  }
+
+  .header {
+    padding: 7px 5rem;
+    height: 9rem;
+  }
+}
