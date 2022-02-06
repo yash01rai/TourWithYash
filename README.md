@@ -55,9 +55,6 @@ Live demo (Feel free to visit) 👉 : https://tour-with-yash.herokuapp.com/
 #### User Profile :
 ![rsz_userprofile](https://user-images.githubusercontent.com/58518192/72607635-44edff80-394b-11ea-8943-64c48f6f19aa.png)
 
-#### Admin Profile :
-![rsz_adminprofile](https://user-images.githubusercontent.com/58518192/72607648-4d463a80-394b-11ea-972f-a73160cfaa5b.png)
-
 
 ## How To Use
 
