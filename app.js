@@ -21,12 +21,13 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieparser = require('cookie-parser');
 
-const app = express();
+const app = express(); // will add bunch of methods to app variable
 
 app.enable('trust proxy'); // cookie secure on heroku
 
+// specifying template engine to express
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views')); // behind the scene will create a path joining dirctory name /views
 
 // 1) Global MIDDLEWARES
 // Implement CORS
@@ -36,8 +37,7 @@ app.use(cors()); // Only for simple request GET, POST
 app.options('*', cors()); // PUT, PATCH, DELETE
 
 // serving static files
-// app.use(express.static(`${__dirname}/public`));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // accessing images, css from public folder
 
 // Set security HTTP headers
 app.use(helmet());

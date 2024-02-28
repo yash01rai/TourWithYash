@@ -26,6 +26,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
     //   "default-src 'self' https://*.mapbox.com https://js.stripe.com/v3/;base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src https://js.stripe.com/v3/ https://cdnjs.cloudflare.com https://api.mapbox.com 'self' blob: ;script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests;"
     // )
     .render('overview', {
+      // below are called locals in the pug file
       title: 'All Tours',
       tours
     });

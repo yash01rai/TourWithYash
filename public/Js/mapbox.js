@@ -3,7 +3,7 @@ export const displayMap = locations => {
     'pk.eyJ1IjoieWFzaHJhaTAxIiwiYSI6ImNreHd5b25wZzF4ZnUyb3BjcGszcmozdnMifQ.gQaIrouUQMHFAnLq3E0JrQ';
 
   var map = new mapboxgl.Map({
-    container: 'map',
+    container: 'map', // need an element id map
     style: 'mapbox://styles/yashrai01/ckxx037pod6h915qztiy6uwz6',
     scrollZoom: false
     //   center: [-118.113491, 34.111745]
@@ -29,11 +29,11 @@ export const displayMap = locations => {
       offset: 30
     })
       .setLngLat(loc.coordinates)
-      .setHTML(`<p>Day ${loc.day}: ${loc.description}`)
+      .setHTML(`<p>Day ${loc.day}: ${loc.description}</p>`)
       .addTo(map);
 
     // Extends map bounds to include current location
-    bounds.extend(loc.coordinates);
+    bounds.extend(loc.coordinates); // zoom and fit
   });
 
   map.fitBounds(bounds, {
