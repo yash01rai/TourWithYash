@@ -25,7 +25,7 @@
 
 ## Deployed Version
 
-Live demo (Feel free to visit) 👉 : https://tour-with-yash.herokuapp.com/
+Live demo (Feel free to visit) 👉 : https://tourwithyash.onrender.com
 
 ## Key Features
 
