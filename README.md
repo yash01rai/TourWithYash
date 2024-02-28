@@ -70,7 +70,7 @@ Live demo (Feel free to visit) 👉 : https://tourwithyash.onrender.com
 - Enter the card details (Test Mood):
   ```
   - Card No. : 4242 4242 4242 4242
-  - Expiry date: 02 / 22
+  - Expiry date: 02 / 27
   - CVV: 222
   ```
 - Finished!
