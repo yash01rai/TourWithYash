@@ -97,13 +97,13 @@ Check [Natours API Documentation](https://documenter.getpostman.com/view/1367197
 
 <b> API Features: </b>
 
-Tours List 👉 https://tour-with-yash.herokuapp.com/api/v1/tours
+Tours List 👉 https://tourwithyash.onrender.com/api/v1/tours
 
-Tours State 👉 https://tour-with-yash.herokuapp.com/api/v1/tours/tour-stats
+Tours State 👉 https://tourwithyash.onrender.com/api/v1/tours/tour-stats
 
-Get Top 5 Cheap Tours 👉 https://tour-with-yash.herokuapp.com/api/v1/tours/top-5-cheap
+Get Top 5 Cheap Tours 👉 https://tourwithyash.onrender.com/api/v1/tours/top-5-cheap
 
-Get Tours Within Radius 👉 https://tour-with-yash.herokuapp.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
+Get Tours Within Radius 👉 https://tourwithyash.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 ## Deployment
 
